@@ -1,6 +1,6 @@
-import ExtensionSection from "../features/ExtensionSection";
+import ExtensionSection from "../features/ExtensionSection/ExtensionSection";
 import FaqSection from "../features/FaqSection";
-import FeatureSection from "../features/FeatureSection";
+import FeatureSection from "../features/FeatureSection/FeatureSection";
 import HeroSection from "../features/HeroSection";
 
 function Main() {

@@ -7,4 +7,28 @@
   --color-Orange: #fa5959;
   --color-Black: #242a45;
   --color-Grey: #9194a2;
+  --color-BlueSecond: #495dcf;
+}
+
+@layer components {
+  .NavList {
+    @apply border-t-[1px] border-white/15 py-6 font-normal;
+  }
+
+  .dropShadow {
+    box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2001);
+  }
+}
+
+/* 
+<h3 className="text-Black mt-[4.31rem] text-2xl leading-[3.25rem] font-medium tracking-[-0.08px]"> */
+
+@layer base {
+  h2 {
+    color: var(--color-Black);
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+    font-weight: 500;
+    letter-spacing: -0.08px;
+  }
 }

@@ -1,4 +1,4 @@
-import heroImg from "../assets/images/illustration-hero.svg";
+import heroImg from "../../assets/images/illustration-hero.svg";
 
 function HeroSection() {
   return (
@@ -9,7 +9,7 @@ function HeroSection() {
         <h1 className="text-Black mt-12 text-center text-[1.875rem] leading-10 font-medium tracking-[-0.09px]">
           A Simple Bookmark Manager
         </h1>
-        <p className="text-Black mt-4 text-center text-[0.94rem] leading-[1.56rem] font-normal tracking-[0px] opacity-50">
+        <p className="mt-4 text-center">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>

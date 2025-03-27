@@ -1,7 +1,7 @@
 import ExtensionSection from "../features/ExtensionSection/ExtensionSection";
-import FaqSection from "../features/FaqSection";
+import FaqSection from "../features/FaqSection/FaqSection";
 import FeatureSection from "../features/FeatureSection/FeatureSection";
-import HeroSection from "../features/HeroSection";
+import HeroSection from "../features/HeroSection/HeroSection";
 
 function Main() {
   return (

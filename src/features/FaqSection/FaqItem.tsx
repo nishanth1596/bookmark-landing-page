@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { hover, motion } from "framer-motion";
 
 type FaqItemProps = {
   question: string;
@@ -21,10 +21,15 @@ function FaqItem({
       >
         {question}
         <span className="block">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+          <svg
+            className={`${isAnswerOpen ? "rotate-180" : ""} transition-all duration-1000 ease-in-out`}
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="12"
+          >
             <path
               fill="none"
-              stroke="#5267DF"
+              stroke={isAnswerOpen ? "#fa5959" : "#5267DF"}
               strokeWidth="3"
               d="M1 1l8 8 8-8"
             />

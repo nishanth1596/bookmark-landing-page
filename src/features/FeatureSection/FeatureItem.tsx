@@ -2,6 +2,7 @@ import { useState } from "react";
 import FeatureButton from "../../ui/FeatureButton";
 import FeatureItemCard from "./FeatureItemCard";
 import { featureData } from "../../data/data";
+import InfoButton from "../../ui/InfoButton";
 
 function FeatureItem() {
   const [tabIndex, setTabIndex] = useState<1 | 2 | 3>(1);
@@ -34,7 +35,9 @@ function FeatureItem() {
             description:
               selectedFeatureData?.description ?? "No description available",
           }}
-        />
+        >
+          <InfoButton />
+        </FeatureItemCard>
       </div>
     </article>
   );

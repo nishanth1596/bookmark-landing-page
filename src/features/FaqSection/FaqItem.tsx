@@ -14,10 +14,10 @@ function FaqItem({
   onHandleAnswer,
 }: FaqItemProps) {
   return (
-    <div className="border-b-Black/15 mt-5 border-b-[1px] pb-7">
+    <div className="border-b-Black/15 group mt-5 border-b-[1px] pb-7">
       <button
         onClick={onHandleAnswer}
-        className="flex w-full items-center justify-between leading-8 font-normal opacity-100"
+        className="flex w-full items-center justify-between leading-8 font-normal opacity-100 group-hover:cursor-pointer"
       >
         {question}
         <span className="block">

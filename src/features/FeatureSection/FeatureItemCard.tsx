@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, ReactNode, useContext } from "react";
 
 type Card = {
   // tabIndex: number;
@@ -14,6 +14,7 @@ type FeatureItemCardContextProps = {
 
 type FeatureItemCardProps = {
   card: Card;
+  children: ReactNode;
 };
 
 const FeatureItemCardContext =
@@ -30,13 +31,13 @@ function useFeatureItemCardContext() {
   return context;
 }
 
-function FeatureItemCard({ card }: FeatureItemCardProps) {
+function FeatureItemCard({ card, children }: FeatureItemCardProps) {
   return (
     <FeatureItemCardContext.Provider value={{ card }}>
       <FeatureItemCard.Image />
       <FeatureItemCard.Title />
       <FeatureItemCard.description />
-      <FeatureItemCard.Button />
+      {children}
     </FeatureItemCardContext.Provider>
   );
 }
@@ -62,16 +63,5 @@ FeatureItemCard.description = function FeatureItemCardDescription() {
     <p className="text-Black text-[.94rem] leading-[1.56rem] font-normal opacity-50">
       {card.description}
     </p>
-  );
-};
-
-FeatureItemCard.Button = function FeatureItemCardButton() {
-  return (
-    <a
-      className="bg-Blue mt-[15px] inline-block rounded-[5px] px-6 py-2.5 text-sm leading-7 font-medium tracking-[0.25px] text-white"
-      href="#"
-    >
-      More Info
-    </a>
   );
 };

@@ -1,5 +1,35 @@
 import ExtensionCardItem from "./ExtensionCardItem";
 import chromeIcon from "../../assets/images/logo-chrome.svg";
+import firefoxIcon from "../../assets/images/logo-firefox.svg";
+import operaIcon from "../../assets/images/logo-opera.svg";
+
+type ExtensionCardDataProps = {
+  browserName: string;
+  version: number;
+  img: string;
+  alt: string;
+};
+
+const extensionCardData: ExtensionCardDataProps[] = [
+  {
+    browserName: "Chrome",
+    version: 62,
+    alt: "Chrome Logo",
+    img: chromeIcon,
+  },
+  {
+    browserName: "Firefox",
+    version: 55,
+    alt: "Firefox logo",
+    img: firefoxIcon,
+  },
+  {
+    browserName: "Opera",
+    version: 46,
+    alt: "Opera logo",
+    img: operaIcon,
+  },
+];
 
 function ExtensionSection() {
   return (
@@ -9,6 +39,16 @@ function ExtensionSection() {
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
         got a favourite you’d like us to prioritize.
       </p>
+
+      {extensionCardData.map((item) => (
+        <ExtensionCardItem
+          browserName={item.browserName}
+          alt={item.alt}
+          img={item.img}
+          version={item.version}
+          key={item.browserName}
+        />
+      ))}
 
       <ExtensionCardItem
         browserName="Chrome"
@@ -21,8 +61,3 @@ function ExtensionSection() {
 }
 
 export default ExtensionSection;
-
-//  Add to Chrome Minimum version 62 Add
-// & Install Extension Add to Firefox Minimum version 55  Add to Opera Minimum version 46 Add & Install Extension Frequently
-// Asked Questions Here are some of our FAQs. If you have any other questions
-// you’d like answered please feel free to email us.

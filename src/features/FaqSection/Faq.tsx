@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FaqItem from "./FaqItem";
 import { faqData } from "../../data/data";
+import InfoButton from "../../ui/InfoButton";
 
 function Faq() {
   const [answerId, setAnswerId] = useState<null | number>();
@@ -20,6 +21,8 @@ function Faq() {
           isAnswerOpen={faq.id === answerId}
         />
       ))}
+
+      <InfoButton isFaq />
     </article>
   );
 }

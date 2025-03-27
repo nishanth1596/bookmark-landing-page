@@ -36,7 +36,7 @@ function FeatureItem() {
               selectedFeatureData?.description ?? "No description available",
           }}
         >
-          <InfoButton />
+          <InfoButton isFaq={false} />
         </FeatureItemCard>
       </div>
     </article>

@@ -22,6 +22,7 @@ function FeatureItem() {
             id={item.id}
             onHandleIndex={handleTabIndex}
             key={item.id}
+            isActive={item.id === tabIndex}
           />
         ))}
       </div>

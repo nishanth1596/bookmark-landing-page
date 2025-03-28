@@ -6,6 +6,9 @@ type NavBarProps = {
 function NavBar({ variant, islargeScreen }: NavBarProps) {
   return (
     <nav
+      aria-label={
+        variant === "header" ? "Primary Navigation" : "Footer Navigation"
+      }
       className={`mx-8 mb-12 flex ${variant === "header" ? "h-screen lg:mx-0 lg:mb-0 lg:h-auto lg:flex-row" : "gap-12 pb-11"} ${islargeScreen && variant === "header" ? "hidden lg:block" : ""} flex-col justify-between text-center lg:mb-0 lg:flex-row lg:pb-0`}
     >
       <ul className="lg:text-Black mt-10 text-xl leading-[1.06rem] tracking-[2.31px] text-white uppercase lg:mt-0 lg:flex lg:items-center lg:gap-12">

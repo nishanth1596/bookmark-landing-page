@@ -15,7 +15,7 @@ function Header() {
         isMenuOpen={isMenuOpen}
       />
 
-      <NavBar variant="header" islargeScreen />
+      <NavBar variant="header" islargeScreen={true} />
 
       {isMenuOpen && (
         <div className="bg-Black fixed inset-0 flex h-screen flex-col lg:hidden">

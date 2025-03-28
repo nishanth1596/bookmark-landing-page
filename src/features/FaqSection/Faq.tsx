@@ -11,16 +11,18 @@ function Faq() {
   }
 
   return (
-    <article className="">
-      {faqData.map((faq) => (
-        <FaqItem
-          key={faq.id}
-          answer={faq.answer}
-          question={faq.question}
-          onHandleAnswer={() => handleAnswer(faq.id)}
-          isAnswerOpen={faq.id === answerId}
-        />
-      ))}
+    <article>
+      <div className="mt-16 space-y-5">
+        {faqData.map((faq) => (
+          <FaqItem
+            key={faq.id}
+            answer={faq.answer}
+            question={faq.question}
+            onHandleAnswer={() => handleAnswer(faq.id)}
+            isAnswerOpen={faq.id === answerId}
+          />
+        ))}
+      </div>
 
       <InfoButton isFaq />
     </article>

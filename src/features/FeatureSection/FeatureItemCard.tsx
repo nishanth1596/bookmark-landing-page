@@ -47,7 +47,7 @@ export default FeatureItemCard;
 FeatureItemCard.Image = function FeatureItemCardImage() {
   const { card } = useFeatureItemCardContext();
 
-  return <img src={card.image} alt={card.alt} />;
+  return <img className="mx-auto" src={card.image} alt={card.alt} />;
 };
 
 FeatureItemCard.Title = function FeatureItemCardTitle() {

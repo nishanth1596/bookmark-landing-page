@@ -5,16 +5,22 @@ type ExtensionCardItemProps = {
   alt: string;
   browserName: string;
   version: number;
+  index: number;
 };
+
+const marginClasses = ["lg:mt-0", "lg:mt-10", "lg:mt-20"];
 
 function ExtensionCardItem({
   img,
   alt,
   browserName,
   version,
+  index,
 }: ExtensionCardItemProps) {
   return (
-    <article className="dropShadowExtenstionCard mt-10 flex flex-col items-center">
+    <article
+      className={`dropShadowExtenstionCard mt-10 ${marginClasses[index]} flex flex-col items-center rounded-2xl`}
+    >
       <img src={img} alt={alt} className="mt-12" />
       <h3 className="text-Black mt-8 text-xl leading-6 font-medium tracking-[0.25px]">
         Add to {browserName}

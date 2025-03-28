@@ -14,8 +14,8 @@ function FeatureItem() {
   const selectedFeatureData = featureData.find((item) => item.id === tabIndex);
 
   return (
-    <article>
-      <div className="border-BlueSecond/20 mt-10 border-b-[1px]">
+    <article className="lg:text-left">
+      <div className="border-BlueSecond/20 mx-auto mt-10 border-b-[1px] lg:mt-[4.69rem] lg:grid lg:max-w-[45.625rem] lg:grid-cols-3">
         {featureData.map((item) => (
           <FeatureButton
             title={item.title}
@@ -27,7 +27,7 @@ function FeatureItem() {
         ))}
       </div>
 
-      <div className="mt-[4.5rem]">
+      <div className="mt-[4.5rem] lg:mt-[4.31rem] lg:grid lg:grid-cols-2 lg:gap-[7.81rem]">
         <FeatureItemCard
           card={{
             image: selectedFeatureData?.image ?? "",

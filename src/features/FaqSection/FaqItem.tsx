@@ -14,10 +14,10 @@ function FaqItem({
   onHandleAnswer,
 }: FaqItemProps) {
   return (
-    <div className="border-b-Black/15 group border-b-[1px] pb-7">
+    <div className="border-b-Black/15 group border-b-[1px] pb-7 lg:pt-5 lg:pr-6 lg:pb-3">
       <button
         onClick={onHandleAnswer}
-        className="flex w-full items-center justify-between leading-8 font-normal opacity-100 group-hover:cursor-pointer"
+        className="hover:text-Orange flex w-full items-center justify-between leading-8 font-normal opacity-100 transition-all duration-300 ease-in-out group-hover:cursor-pointer lg:text-lg lg:leading-7"
       >
         {question}
         <span className="block">
@@ -47,7 +47,7 @@ function FaqItem({
         transition={{ duration: 0.4, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="mt-[26px] text-left leading-[1.875rem] opacity-75 transition-all duration-1000 ease-in-out">
+        <p className="mt-[26px] text-left leading-[1.875rem] opacity-75 transition-all duration-1000 ease-in-out lg:mt-8 lg:leading-9 lg:tracking-[0.15px]">
           {answer}
         </p>
       </motion.div>

@@ -35,9 +35,11 @@ function FeatureItemCard({ card, children }: FeatureItemCardProps) {
   return (
     <FeatureItemCardContext.Provider value={{ card }}>
       <FeatureItemCard.Image />
-      <FeatureItemCard.Title />
-      <FeatureItemCard.description />
-      {children}
+      <div>
+        <FeatureItemCard.Title />
+        <FeatureItemCard.description />
+        {children}
+      </div>
     </FeatureItemCardContext.Provider>
   );
 }
@@ -53,14 +55,14 @@ FeatureItemCard.Image = function FeatureItemCardImage() {
 FeatureItemCard.Title = function FeatureItemCardTitle() {
   const { card } = useFeatureItemCardContext();
 
-  return <h2 className="mt-[4.31rem]">{card.title}</h2>;
+  return <h2 className="mt-[4.31rem] lg:mt-[3.625rem]">{card.title}</h2>;
 };
 
 FeatureItemCard.description = function FeatureItemCardDescription() {
   const { card } = useFeatureItemCardContext();
 
   return (
-    <p className="text-Black text-[.94rem] leading-[1.56rem] font-normal opacity-50">
+    <p className="text-Black text-[.94rem] leading-[1.56rem] font-normal opacity-50 xl:mt-4">
       {card.description}
     </p>
   );

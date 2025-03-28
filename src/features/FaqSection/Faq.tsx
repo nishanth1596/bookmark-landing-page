@@ -12,7 +12,7 @@ function Faq() {
 
   return (
     <article>
-      <div className="mt-16 space-y-5">
+      <div className="lg:border-Black/15 mt-16 space-y-5 lg:mt-14 lg:space-y-0 lg:border-t-[1px]">
         {faqData.map((faq) => (
           <FaqItem
             key={faq.id}

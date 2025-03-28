@@ -1,13 +1,14 @@
 type NavBarProps = {
   variant: "header" | "footer";
+  islargeScreen: boolean;
 };
 
-function NavBar({ variant }: NavBarProps) {
+function NavBar({ variant, islargeScreen }: NavBarProps) {
   return (
     <nav
-      className={`mx-8 mb-12 flex ${variant === "header" ? "h-screen" : "gap-12 pb-11"} flex-col justify-between text-center`}
+      className={`mx-8 mb-12 flex ${variant === "header" ? "h-screen lg:mx-0 lg:mb-0 lg:h-auto lg:flex-row" : "gap-12 pb-11"} ${islargeScreen && "hidden lg:block"} flex-col justify-between text-center`}
     >
-      <ul className="mt-10 text-xl leading-[1.06rem] tracking-[2.31px] text-white uppercase">
+      <ul className="lg:text-Black mt-10 text-xl leading-[1.06rem] tracking-[2.31px] text-white uppercase lg:mt-0 lg:flex lg:items-center lg:gap-12">
         <li className={`${variant === "header" ? "NavList" : "NavListHeader"}`}>
           <a href="#">features</a>
         </li>
@@ -21,7 +22,9 @@ function NavBar({ variant }: NavBarProps) {
         </li>
 
         {variant === "header" && (
-          <li className="group hover:text-Black active:border-Orange active:text-Orange mt-6 w-full rounded-[5px] border-2 py-4 font-medium transition-all duration-300 ease-in hover:border-2 hover:border-black hover:bg-white">
+          <li
+            className={`hover:text-Black active:border-Orange active:text-Orange mt-6 w-full cursor-pointer rounded-[5px] border-2 py-4 font-medium transition-all duration-300 ease-in hover:border-2 hover:border-black hover:bg-white lg:mt-0 ${islargeScreen && "lg:hover:border-Orange lg:active:border-Orange lg:active:text-Orange lg:hover:text-Orange lg:px-8 lg:py-3 lg:hover:border-2"} `}
+          >
             <a href="#">login</a>
           </li>
         )}

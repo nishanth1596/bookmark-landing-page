@@ -12,7 +12,7 @@ function MenuButton({
   return (
     <button
       onClick={handleShowMenu}
-      className="cursor-pointer"
+      className="cursor-pointer lg:hidden"
       aria-label={ariaLabel}
     >
       {!isMenuOpen ? (

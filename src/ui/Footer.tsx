@@ -53,7 +53,7 @@ function Footer() {
             </p>
           )}
 
-          <button className="bg-Orange mt-4 block w-full rounded-[5px] py-2.5 text-sm leading-7 font-medium tracking-[0.25px]">
+          <button className="bg-Orange hover:text-Orange active:text-Orange mt-4 block w-full cursor-pointer rounded-[5px] py-2.5 text-sm leading-7 font-medium tracking-[0.25px] transition-all duration-300 ease-in-out hover:scale-x-[1.2] hover:scale-y-[1.1] hover:bg-white hover:outline active:scale-[0.9] active:bg-white sm:max-w-32">
             Contact us
           </button>
         </form>

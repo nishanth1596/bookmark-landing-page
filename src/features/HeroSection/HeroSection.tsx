@@ -16,10 +16,10 @@ function HeroSection() {
 
         <nav className="mt-8" aria-label="Download options">
           <ul className="flex items-center gap-3.5">
-            <li className="bg-Blue dropShadow cursor-pointer rounded-[5px] px-4 py-2.5 text-sm leading-7 font-medium tracking-[0.25px] text-white">
+            <li className="bg-Blue hover:outline-Blue hover:text-Blue dropShadow cursor-pointer rounded-[5px] px-4 py-2.5 text-sm leading-7 font-medium tracking-[0.25px] text-white transition-all duration-300 ease-in-out hover:scale-[1.1] hover:bg-white hover:outline-1 active:scale-[0.9]">
               <a href="#download">Get it on chrome</a>
             </li>
-            <li className="dropShadow cursor-pointer px-4 py-2.5 text-sm leading-7 font-medium tracking-[.25px] opacity-75">
+            <li className="dropShadow hover:outline-Black cursor-pointer rounded-[5px] px-4 py-2.5 text-sm leading-7 font-medium tracking-[.25px] opacity-75 transition-all duration-300 ease-in-out hover:scale-[1.1] hover:outline-1 active:scale-[0.9]">
               <a href="#download">Get it on firefox</a>
             </li>
           </ul>

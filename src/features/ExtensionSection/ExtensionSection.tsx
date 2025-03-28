@@ -3,7 +3,7 @@ import ExtensionCardItem from "./ExtensionCardItem";
 
 function ExtensionSection() {
   return (
-    <section className="mx-8 mt-[4.81rem] text-center">
+    <section id="download" className="mx-8 mt-[4.81rem] text-center">
       <h2>Download the extension</h2>
       <p>
         We’ve got more browsers in the pipeline. Please do let us know if you’ve

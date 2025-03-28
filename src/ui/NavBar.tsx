@@ -21,7 +21,7 @@ function NavBar({ variant }: NavBarProps) {
         </li>
 
         {variant === "header" && (
-          <li className="group hover:text-Black mt-6 w-full rounded-[5px] border-2 py-4 font-medium transition-colors duration-300 ease-in hover:border-2 hover:border-black hover:bg-white">
+          <li className="group hover:text-Black active:border-Orange active:text-Orange mt-6 w-full rounded-[5px] border-2 py-4 font-medium transition-all duration-300 ease-in hover:border-2 hover:border-black hover:bg-white">
             <a href="#">login</a>
           </li>
         )}

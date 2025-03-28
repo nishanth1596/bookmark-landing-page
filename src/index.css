@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --font-family: "Rubik", "sans-serif";
 
@@ -13,10 +17,32 @@
 @layer components {
   .NavListHeader {
     @apply py-6 font-normal;
+
+    &:hover {
+      color: var(--color-Orange);
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   .NavList {
     @apply border-t-[1px] border-white/15 py-6 font-normal;
+
+    &:hover {
+      color: var(--color-Orange);
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:active {
+      transform: scale(0.9);
+      transition: all 0.3s ease-in-out;
+    }
   }
 
   .dropShadow {

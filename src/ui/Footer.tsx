@@ -27,9 +27,9 @@ function Footer() {
         </form>
       </section>
 
-      <section className="bg-Black">
-        <Logo />
-        <NavBar />
+      <section className="bg-Black flex flex-col items-center">
+        <Logo variant="footer" />
+        <NavBar variant="footer" />
       </section>
     </footer>
   );

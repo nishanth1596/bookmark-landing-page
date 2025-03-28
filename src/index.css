@@ -11,6 +11,10 @@
 }
 
 @layer components {
+  .NavListHeader {
+    @apply py-6 font-normal;
+  }
+
   .NavList {
     @apply border-t-[1px] border-white/15 py-6 font-normal;
   }

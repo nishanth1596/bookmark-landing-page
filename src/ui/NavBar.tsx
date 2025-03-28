@@ -1,19 +1,30 @@
-function NavBar() {
+type NavBarProps = {
+  variant: "header" | "footer";
+};
+
+function NavBar({ variant }: NavBarProps) {
   return (
-    <nav className="mx-8 mb-12 flex h-screen flex-col justify-between text-center">
+    <nav
+      className={`mx-8 mb-12 flex ${variant === "header" ? "h-screen" : "gap-12 pb-11"} flex-col justify-between text-center`}
+    >
       <ul className="mt-10 text-xl leading-[1.06rem] tracking-[2.31px] text-white uppercase">
-        <li className="NavList">
+        <li className={`${variant === "header" ? "NavList" : "NavListHeader"}`}>
           <a href="#">features</a>
         </li>
-        <li className="NavList">
+        <li className={`${variant === "header" ? "NavList" : "NavListHeader"}`}>
           <a href="#">pricing</a>
         </li>
-        <li className="NavList border-b-[1px] border-white/15">
+        <li
+          className={`${variant === "header" ? "NavList border-b-[1px] border-white/15" : "NavListHeader"}`}
+        >
           <a href="#">contact</a>
         </li>
-        <li className="group hover:text-Black mt-6 w-full rounded-[5px] border-2 py-4 font-medium transition-colors duration-300 ease-in hover:border-2 hover:border-black hover:bg-white">
-          <a href="#">login</a>
-        </li>
+
+        {variant === "header" && (
+          <li className="group hover:text-Black mt-6 w-full rounded-[5px] border-2 py-4 font-medium transition-colors duration-300 ease-in hover:border-2 hover:border-black hover:bg-white">
+            <a href="#">login</a>
+          </li>
+        )}
       </ul>
 
       <div className="flex items-center justify-center gap-10">

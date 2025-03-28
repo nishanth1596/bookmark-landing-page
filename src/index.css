@@ -15,8 +15,8 @@ html {
 }
 
 @layer components {
-  .NavListHeader {
-    @apply py-6 font-normal;
+  .NavListFooter {
+    @apply py-6 font-normal lg:py-0 lg:text-[13px] lg:leading-[17px] lg:tracking-[1.5px] lg:text-white;
 
     &:hover {
       color: var(--color-Orange);
@@ -30,7 +30,7 @@ html {
     }
   }
 
-  .NavList {
+  .NavListHeader {
     @apply border-t-[1px] border-white/15 py-6 font-normal lg:py-0;
 
     &:hover {

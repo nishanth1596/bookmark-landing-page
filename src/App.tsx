@@ -15,6 +15,3 @@ function App() {
 }
 
 export default App;
-
-// lg: mx-12
-// lg:mt-28 xl:mt-180px

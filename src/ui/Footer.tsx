@@ -72,12 +72,15 @@ function Footer() {
         </form>
       </section>
 
-      <section className="bg-Black lg:bg-Orange flex flex-col items-center">
-        <Logo variant="footer" />
-        <NavBar variant="footer" islargeScreen />
+      <section className="bg-Black">
+        <div className="flex flex-col items-center lg:mx-auto lg:grid lg:max-w-[69.375rem] lg:grid-cols-[148fr_898fr] lg:gap-x-16 lg:py-8">
+          <Logo variant="footer" />
+          <NavBar variant="footer" islargeScreen />
+        </div>
       </section>
     </footer>
   );
 }
 
 export default Footer;
+// lg:flex-row lg:justify-around

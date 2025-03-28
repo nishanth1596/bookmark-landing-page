@@ -41,7 +41,7 @@ function Logo(props: LogoProps) {
 
   return (
     <a href="#">
-      <span className="block pt-10">
+      <span className="block pt-10 lg:pt-0">
         <svg
           className=""
           width="148"

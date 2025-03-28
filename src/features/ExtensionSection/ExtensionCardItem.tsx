@@ -8,7 +8,11 @@ type ExtensionCardItemProps = {
   index: number;
 };
 
-const marginClasses = ["lg:mt-0", "lg:mt-10", "lg:mt-20"];
+const marginClasses = [
+  "lg:mt-0 lg:mb-20",
+  "lg:mt-10 lg:mb-10",
+  "lg:mt-20 lg:mb-0",
+];
 
 function ExtensionCardItem({
   img,
